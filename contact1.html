@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <title>Contact Us | Hebbale Academy</title>
+  </head>
+  <body>
+    <div class="modal-bg">
+      <div class="modal">
+        <div class="info">
+          <div>
+            <span><h3>Details</h3></span>
+            <p id="blank"></p>
+            <p id="pop_name"></p>
+            <p id="pop_email"></p>
+            <p id="pop_number"></p>
+          </div>
+          <div>
+            <span id="close">X</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="layout" class="close">
+      <div class="app_container">
+        <header class="navbar">
+          <div class="HA">
+            <img
+              src="../Hebbale2/images/ha-logo.png"
+              alt="Hebbale Academy logo"
+              width="300px"
+              height="150px"
+            />
+          </div>
+          <div class="nav_menubtns">
+            <div class="socialmedia">
+              <div>
+                <a href="" class="soc_icon">
+                  <img
+                    src="https://storage.googleapis.com/ha-website/navbar/linked-in-icon.png"
+                    alt="linkedIn"
+                    width="25px"
+                    height="25px"
+                  />
+                </a>
+                <a href="" class="soc_icon">
+                  <img
+                    src="https://storage.googleapis.com/ha-website/navbar/youtube-icon.png"
+                    alt="youtube"
+                    width="25px"
+                    height="25px"
+                  />
+                </a>
+                <a href="" class="soc_icon">
+                  <img
+                    src="https://storage.googleapis.com/ha-website/navbar/instagram-icon.png"
+                    alt="instagram"
+                    width="25px"
+                    height="25px"
+                  />
+                </a>
+                <a href="" class="soc_icon">
+                  <img
+                    src="https://storage.googleapis.com/ha-website/navbar/twitter-con.png"
+                    alt="twitter"
+                    width="25px"
+                    height="25px"
+                  />
+                </a>
+                <a href="" class="soc_icon">
+                  <img
+                    src="https://storage.googleapis.com/ha-website/navbar/facebook-icon.png"
+                    alt="facebook"
+                    width="25px"
+                    height="25px"
+                  />
+                </a>
+              </div>
+              <span class="secondary_btns">
+                <span class="nav_secbtns"><a href="#">FAQ</a> </span>
+                <span class="nav_secbtns color"
+                  ><a href="">Contact Us</a>
+                </span>
+              </span>
+              <button class="login">Login</button>
+            </div>
+            <div class="nav_menu">
+              <span class="nav_menu_items">Home</span>
+              <span class="nav_menu_items">Catalog</span>
+              <span class="nav_menu_items">Individual</span>
+              <span class="nav_menu_items">Institutions</span>
+              <span class="nav_menu_items">Employer</span>
+              <span class="nav_menu_items">About Us</span>
+            </div>
+          </div>
+        </header>
+
+        <main>
+          <div id="container">
+            <div class="form_address">
+              <div class="form">
+                <form id="myForm" name="regForm">
+                  <h3 class="txt">Get in touch!</h3>
+                  <br />
+
+                  <div class="inputs">
+                    <div class="hover">
+                      <input
+                        type="text"
+                        id="name"
+                        name="fname"
+                        oninput="inputName()"
+                        placeholder="Your Name"
+                      />
+                      <span id="error"></span>
+                    </div>
+
+                    <div class="email_phone">
+                      <div class="hover e_pe">
+                        <input
+                          type="email"
+                          id="email"
+                          placeholder="Your E-Mail"
+                          oninput="inputEmail ()"
+                          name="femail"
+                        />
+                        <span id="emailerror"></span>
+                      </div>
+
+                      <div class="hover e_pn">
+                        <input
+                          type="phone"
+                          id="number"
+                          oninput="inputNum ()"
+                          placeholder="Mobile"
+                          name="fphone"
+                        />
+                        <span id="numerror"></span>
+                      </div>
+                    </div>
+
+                    <div class="hover">
+                      <input
+                        type="text"
+                        name="fsubj"
+                        id="subject"
+                        placeholder="Subject"
+                      />
+                    </div>
+                    <br />
+
+                    <div class="hover">
+                      <textarea
+                        name="textarea"
+                        id="area"
+                        cols="30"
+                        rows="15"
+                        oninput="inputMsg ()"
+                        placeholder="Message"
+                      ></textarea>
+                      <span id="msgerror"></span>
+                    </div>
+
+                    <div>
+                      <input
+                        type="submit"
+                        onsubmit="return addEventListener()"
+                        id="button"
+                        value="Send Message"
+                      />
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div id="table">
+                <h2>DETAILS</h2>
+                <table id="display">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>PhoneNo</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <footer>
+          <div class="footer">
+            <div class="left">
+              <span class="copyright">&copy</span>
+              <span class="name"> 2022 | Hebbale Labs Private Limited</span>
+            </div>
+            <div>
+              <span class="right">Terms of Use | Privacy Policy</span>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+
+  <script src="script1.js"></script>
+</html>
